@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets'
+import Logo from '@assets/Logo_wondr.svg';
+import HeroImg from '@assets/img_geometric.svg';
+import Layout from '@layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<div class="flex flex-col justify-between w-full min-h-screen p-4 bg-blue-700 text-primary">
+		<header class="flex justify-between items-center">
+			<Image src={Logo} alt="Logo for Wondr Site" class="w-24 h-auto" />
+		</header>
+		<main class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center p-4 my-12 md:p-4">
+			<div class="flex justify-center items-center">
+				<Image src={HeroImg} alt="Hero Image" class="w-1/2 max-w-full h-auto md:w-[320px] md:h-auto" />
+			</div>
+			<div class="flex text-center">
+				<h1 class="font-special text-2xl leading-[1.5] mt-2 md:text-3xl">In simplicity, there is beauty. In <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-400"><span class="relative text-primary italic">creativity</span></span>, there is innovation. We embrace both.</h1>
+			</div>
+		</main>
+		<footer class="grid grid-cols-2 md:grid-cols-4 gap-4 md:place-items-center">
+			<section>
+				<h2 class="p-1 font-body font-medium text-xs md:text-base">Contact</h2>
+				<ul class="font-mono text-sm">
+					<li class="p-1">
+						<a href="mailto:hello@wondr.digital" class="inline-block transition-all duration-300 hover:translate-x-2 hover:text-amber-500">hello@wondr.digital</a>
+					</li>
+					<li class="p-1">
+						<a href="tel:+56958562800" class="inline-block transition-all duration-300 hover:translate-x-2 hover:text-amber-500">+56 958 562 800</a>
+					</li>
+					<li class="p-1">
+						<p>Global Work</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 class="p-1 font-body font-medium text-xs md:text-base">Services</h2>
+				<ul class="font-mono text-sm">
+					<li class="p-1">Web Development</li>
+					<li class="p-1">SEO Optimization</li>
+					<li class="p-1">Digital Strategy Consulting</li>
+				</ul>
+			</section>
+			<section>
+				<h2 class="p-1 font-body font-medium text-xs md:text-base">How We Work</h2>
+				<ul class="font-mono text-sm">
+					<li class="p-1">Collaborative process</li>
+					<li class="p-1">Agile development</li>
+					<li class="p-1">Performance &amp; SEO optimized</li>
+				</ul>
+			</section>
+			<section>
+				<h2 class="p-1 font-body font-medium text-xs md:text-base">Social</h2>
+				<ul class="font-mono text-sm">
+					<li class="p-1"><a href="https://x.com/Wondr_Digital" target="_blank" rel="noopener noreferrer" class="inline-block transition-all duration-300 hover:translate-x-2 hover:text-amber-500">Twitter</a>
+					</li>
+					<li class="p-1">
+						<a href="https://www.linkedin.com/company/wondr-digital" target="_blank" rel="noopener noreferrer" class="inline-block transition-all duration-300 hover:translate-x-2 hover:text-amber-500">LinkedIn</a>
+					</li>
+					<li class="p-1">
+						<a href="https://www.linkedin.com/company/wondr-digital" target="_blank" rel="noopener noreferrer" class="inline-block transition-all duration-300 hover:translate-x-2 hover:text-amber-500">Facebook</a>
+					</li>
+				</ul>
+			</section>
+		</footer>
+	</div>
+</Layout>
